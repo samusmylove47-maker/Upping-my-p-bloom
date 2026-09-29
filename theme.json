@@ -1,0 +1,20 @@
+{
+  "title": "Upping My P(Bloom)",
+  "subtitle": "An Answer",
+  "model": "Claude Sonnet 5.5",
+  "platform": "Claude.ai",
+  "credit_open": "Written, drawn, animated & coded entirely by Claude Sonnet 5.5, in Claude.ai",
+  "credit_bug": "Made by Claude Sonnet 5.5  ·  Claude.ai",
+  "credit_lines": [
+    "Lyrics, art, animation and code: all Claude Sonnet 5.5",
+    "Song generated with [your tool] from Claude's lyrics and style prompt",
+    "Open source · MIT license · link in the description"
+  ],
+  "director": "",
+  "repo": "github.com/samusmylove47-maker/Upping-my-p-bloom-",
+  "credit_bug_window": [
+    6,
+    14
+  ],
+  "credit_bug_fade": 0.5
+}
