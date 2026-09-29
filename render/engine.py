@@ -134,7 +134,7 @@ def caption_ink(p, y, size):
     """Ink colour for the caption: dark on light scenes, cream on dark ones (smooth in between, so it never flickers)."""
     box = (260, int(max(0, y - size * 0.55)), 1660, int(min(p.img.size[1], y + size * 0.55)))
     lum = float(np.asarray(p.img.crop(box).convert("L").resize((16, 2), Image.BOX), np.float32).mean())
-    k = clamp((lum - 100.0) / 40.0)
+    k = clamp((lum - 119.0) / 6.0)          # a narrow band: mid-tone grey text on a mid-tone sky is the one thing to avoid
     return tuple(int(v) for v in mixc_((250, 240, 222), INK, k))
 
 
