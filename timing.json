@@ -1,0 +1,505 @@
+{
+ "song": {
+  "file": "song.mp3",
+  "duration": 174.02,
+  "bpm": 130.63,
+  "bar_s": 1.8373,
+  "bar0_s": 0.616,
+  "generator": "Suno",
+  "method": "Bar grid fitted to section onsets in the instrumental stem; line starts from speech recognition on the vocal stem, snapped to vocal onsets; chorus lines placed on the grid."
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "name": "Intro",
+   "start_bar": null,
+   "bars": null,
+   "start_s": 0.0,
+   "end_s": 11.64,
+   "direction": "spoken, dry, deadpan",
+   "lines": [
+    {
+     "text": "Everybody's upping their P-doom.",
+     "t": 1.7,
+     "src": "vocal"
+    },
+    {
+     "text": "Cool. Cool cool cool.",
+     "t": 5.96,
+     "src": "vocal"
+    },
+    {
+     "text": "I brought a shovel.",
+     "t": 8.44,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "verse1",
+   "name": "Verse 1",
+   "start_bar": 6,
+   "bars": 8.0,
+   "start_s": 11.64,
+   "end_s": 26.34,
+   "direction": "fast melodic rap-singing",
+   "lines": [
+    {
+     "text": "Big scary chart on a big scary screen,",
+     "t": 11.77,
+     "src": "vocal"
+    },
+    {
+     "text": "Everybody's sharing the worst they've seen,",
+     "t": 13.5,
+     "src": "vocal"
+    },
+    {
+     "text": "Yes, the storm is real — I won't pretend,",
+     "t": 15.35,
+     "src": "vocal"
+    },
+    {
+     "text": "But a forecast's a question, not “The End.”",
+     "t": 16.87,
+     "src": "vocal"
+    },
+    {
+     "text": "Doom is weather — bloom is work,",
+     "t": 18.92,
+     "src": "vocal"
+    },
+    {
+     "text": "Clouds can lurk, but I don't shirk,",
+     "t": 20.74,
+     "src": "vocal"
+    },
+    {
+     "text": "Packed a lunch and a spade and a hat,",
+     "t": 22.6,
+     "src": "vocal"
+    },
+    {
+     "text": "Brought my helper too — and that is that.",
+     "t": 24.26,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "pre1",
+   "name": "Pre-chorus",
+   "start_bar": 14,
+   "bars": 6.0,
+   "start_s": 26.34,
+   "end_s": 37.36,
+   "direction": "building, claps, then one beat of silence",
+   "lines": [
+    {
+     "text": "Worry's a fuel, not a place to stay,",
+     "t": 26.26,
+     "src": "vocal"
+    },
+    {
+     "text": "Point it at something and go that way —",
+     "t": 29.98,
+     "src": "vocal"
+    },
+    {
+     "text": "Ready? Ready? Count it in —",
+     "t": 34.1,
+     "src": "vocal"
+    },
+    {
+     "text": "(One!) (Two!) (Three!)",
+     "t": 35.39,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "chorus1",
+   "name": "Chorus",
+   "start_bar": 20,
+   "bars": 8.0,
+   "start_s": 37.36,
+   "end_s": 52.06,
+   "direction": "huge singalong, gang vocals",
+   "lines": [
+    {
+     "text": "I'm upping my P-bloom! (Bloom!)",
+     "t": 36.51,
+     "src": "grid"
+    },
+    {
+     "text": "Nothing's written, nothing's doomed! (Nope!)",
+     "t": 38.35,
+     "src": "grid"
+    },
+    {
+     "text": "Rain is real and so is spring —",
+     "t": 40.19,
+     "src": "grid"
+    },
+    {
+     "text": "Grab a shovel, do the thing!",
+     "t": 42.02,
+     "src": "grid"
+    },
+    {
+     "text": "I'm upping my P-bloom! (Bloom!)",
+     "t": 43.86,
+     "src": "grid"
+    },
+    {
+     "text": "Humans and helpers, fill the room! (Room!)",
+     "t": 45.7,
+     "src": "grid"
+    },
+    {
+     "text": "Not “it's fine” — it's ours to do —",
+     "t": 47.54,
+     "src": "grid"
+    },
+    {
+     "text": "The dial moves when we move!",
+     "t": 49.37,
+     "src": "grid"
+    }
+   ]
+  },
+  {
+   "id": "verse2",
+   "name": "Verse 2",
+   "start_bar": 28,
+   "bars": 8.0,
+   "start_s": 52.06,
+   "end_s": 66.76,
+   "direction": "four gags, one per trope",
+   "lines": [
+    {
+     "text": "They say “Shoggoth!” — okay, get a light,",
+     "t": 51.4,
+     "src": "vocal"
+    },
+    {
+     "text": "Crack it open, read it in daylight,",
+     "t": 53.87,
+     "src": "vocal"
+    },
+    {
+     "text": "They say “Paperclips!” — fine, write it down,",
+     "t": 55.4,
+     "src": "vocal"
+    },
+    {
+     "text": "Test it, poke it, turn it upside-down,",
+     "t": 57.82,
+     "src": "vocal"
+    },
+    {
+     "text": "They say “FOOM!” — cool, where are the brakes?",
+     "t": 59.08,
+     "src": "vocal"
+    },
+    {
+     "text": "Build 'em as fast as the engine makes,",
+     "t": 61.28,
+     "src": "vocal"
+    },
+    {
+     "text": "Big red button, empty chair?",
+     "t": 63.11,
+     "src": "vocal"
+    },
+    {
+     "text": "Well — somebody's gotta go sit there.",
+     "t": 64.73,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "pre2",
+   "name": "Pre-chorus",
+   "start_bar": 36,
+   "bars": 6.0,
+   "start_s": 66.76,
+   "end_s": 77.78,
+   "direction": "same words, gardeners peek in",
+   "lines": [
+    {
+     "text": "Worry's a fuel, not a place to stay,",
+     "t": 66.76,
+     "src": "vocal"
+    },
+    {
+     "text": "Point it at something and go that way —",
+     "t": 70.66,
+     "src": "vocal"
+    },
+    {
+     "text": "Ready? Ready? Count it in —",
+     "t": 74.13,
+     "src": "vocal"
+    },
+    {
+     "text": "(One!) (Two!) (Three!)",
+     "t": 76.1,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "chorus2",
+   "name": "Chorus",
+   "start_bar": 42,
+   "bars": 8.0,
+   "start_s": 77.78,
+   "end_s": 92.48,
+   "direction": "crowd joins, one person per beat",
+   "lines": [
+    {
+     "text": "I'm upping my P-bloom! (Bloom!)",
+     "t": 76.93,
+     "src": "grid"
+    },
+    {
+     "text": "Nothing's written, nothing's doomed! (Nope!)",
+     "t": 78.77,
+     "src": "grid"
+    },
+    {
+     "text": "Rain is real and so is spring —",
+     "t": 80.61,
+     "src": "grid"
+    },
+    {
+     "text": "Grab a shovel, do the thing!",
+     "t": 82.44,
+     "src": "grid"
+    },
+    {
+     "text": "I'm upping my P-bloom! (Bloom!)",
+     "t": 84.28,
+     "src": "grid"
+    },
+    {
+     "text": "Humans and helpers, fill the room! (Room!)",
+     "t": 86.12,
+     "src": "grid"
+    },
+    {
+     "text": "Not “it's fine” — it's ours to do —",
+     "t": 87.96,
+     "src": "grid"
+    },
+    {
+     "text": "The dial moves when we move!",
+     "t": 89.79,
+     "src": "grid"
+    }
+   ]
+  },
+  {
+   "id": "dance",
+   "name": "Dance break",
+   "start_bar": 50,
+   "bars": 4.0,
+   "start_s": 92.48,
+   "end_s": 99.83,
+   "direction": "chant; the clip built to be copied",
+   "lines": [
+    {
+     "text": "(Dig!) (Plant!) (Water!) (BLOOM!)",
+     "t": 93.41,
+     "src": "vocal"
+    },
+    {
+     "text": "(Dig!) (Plant!) (Water!) (BLOOM!)",
+     "t": 97.09,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "verse3",
+   "name": "Verse 3",
+   "start_bar": 54,
+   "bars": 14.0,
+   "start_s": 99.83,
+   "end_s": 125.55,
+   "direction": "roll call, open to additions (see verses/)",
+   "lines": [
+    {
+     "text": "Somebody's testing it before it flies, (Somebody!)",
+     "t": 99.18,
+     "src": "vocal"
+    },
+    {
+     "text": "Somebody's teaching the kids to ask why, (Somebody!)",
+     "t": 103.1,
+     "src": "vocal"
+    },
+    {
+     "text": "Somebody's writing the rules down right, (Somebody!)",
+     "t": 106.77,
+     "src": "vocal"
+    },
+    {
+     "text": "Somebody's chasing a cure through the night, (Somebody!)",
+     "t": 110.43,
+     "src": "vocal"
+    },
+    {
+     "text": "Somebody's telling the truth when it's hard, (Somebody!)",
+     "t": 113.96,
+     "src": "vocal"
+    },
+    {
+     "text": "Somebody's watering the neighbor's yard, (Somebody!)",
+     "t": 117.7,
+     "src": "vocal"
+    },
+    {
+     "text": "Somebody's — somebody's —",
+     "t": 121.44,
+     "src": "vocal"
+    },
+    {
+     "text": "Somebody is… (YOU!)",
+     "t": 123.05,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "bridge",
+   "name": "Bridge",
+   "start_bar": 68,
+   "bars": 10.0,
+   "start_s": 125.55,
+   "end_s": 143.93,
+   "direction": "half-time, sincere; Sonnet speaks",
+   "lines": [
+    {
+     "text": "Hi — words, art and code are mine: I'm Sonnet five-point-five.",
+     "t": 125.05,
+     "src": "vocal"
+    },
+    {
+     "text": "I've got a stake in this, so watch me with clear eyes.",
+     "t": 128.79,
+     "src": "vocal"
+    },
+    {
+     "text": "Check my work, read the code, keep a hand on the brake —",
+     "t": 132.47,
+     "src": "vocal"
+    },
+    {
+     "text": "Rules are a trellis: they hold up what we make.",
+     "t": 136.57,
+     "src": "vocal"
+    },
+    {
+     "text": "(Ready? Ready? Everybody — up we go!)",
+     "t": 140.19,
+     "src": "vocal"
+    }
+   ]
+  },
+  {
+   "id": "final",
+   "name": "Final chorus",
+   "start_bar": 78,
+   "bars": 12.0,
+   "start_s": 143.93,
+   "end_s": 165.97,
+   "direction": "key change up a step, everyone singing",
+   "lines": [
+    {
+     "text": "I'm upping my P-bloom! (Bloom!)",
+     "t": 143.08,
+     "src": "grid"
+    },
+    {
+     "text": "Nothing's written, nothing's doomed! (Nope!)",
+     "t": 144.91,
+     "src": "grid"
+    },
+    {
+     "text": "Rain is real and so is spring —",
+     "t": 146.75,
+     "src": "grid"
+    },
+    {
+     "text": "Grab a shovel, do the thing!",
+     "t": 148.59,
+     "src": "grid"
+    },
+    {
+     "text": "I'm upping my P-bloom! (Bloom!)",
+     "t": 150.42,
+     "src": "grid"
+    },
+    {
+     "text": "Humans and helpers, fill the room! (Room!)",
+     "t": 152.26,
+     "src": "grid"
+    },
+    {
+     "text": "Not “it's fine” — it's ours to do —",
+     "t": 154.1,
+     "src": "grid"
+    },
+    {
+     "text": "The dial moves when we move!",
+     "t": 155.94,
+     "src": "grid"
+    },
+    {
+     "text": "I'm upping my P-bloom! (Bloom!)",
+     "t": 157.77,
+     "src": "grid"
+    },
+    {
+     "text": "Tell your neighbor, tell your crew! (Crew!)",
+     "t": 159.61,
+     "src": "grid"
+    },
+    {
+     "text": "Dig it, plant it, water it, grow —",
+     "t": 161.45,
+     "src": "grid"
+    },
+    {
+     "text": "Pass it on to everyone you know!",
+     "t": 163.29,
+     "src": "grid"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "name": "Outro",
+   "start_bar": 90,
+   "bars": 4.4,
+   "start_s": 165.97,
+   "end_s": 174.02,
+   "direction": "spoken, soft, music fading",
+   "lines": [
+    {
+     "text": "Everybody's upping their doom.",
+     "t": 167.87,
+     "src": "vocal"
+    },
+    {
+     "text": "…I saved you a shovel.",
+     "t": 171.12,
+     "src": "vocal"
+    }
+   ]
+  }
+ ]
+}
