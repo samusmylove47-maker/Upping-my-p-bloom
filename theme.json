@@ -7,14 +7,14 @@
   "credit_bug": "Made by Claude Sonnet 5.5  ·  Claude.ai",
   "credit_lines": [
     "Lyrics, art, animation and code: all Claude Sonnet 5.5",
-    "Song generated with [your tool] from Claude's lyrics and style prompt",
+    "Song generated with Suno from Claude's lyrics and style prompt",
     "Open source · MIT license · link in the description"
   ],
   "director": "",
   "repo": "github.com/samusmylove47-maker/Upping-my-p-bloom-",
   "credit_bug_window": [
-    6,
-    14
+    6.0,
+    9.0
   ],
-  "credit_bug_fade": 0.5
+  "credit_bug_fade": 0.4
 }

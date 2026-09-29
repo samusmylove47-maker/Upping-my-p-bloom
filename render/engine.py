@@ -83,7 +83,7 @@ def _hits():
     for j, tt in enumerate([55.2, 59.0, 62.6, 66.3]): h.append((tt, 0.54 + 0.02 * j))
     h += [(75.2, 0.62), (75.8, 0.64), (76.4, 0.66)]
     for k in range(8): h.append((bar_t(42 + k) + 0.36, 0.68 + 0.017 * k))
-    for j, i in enumerate(range(6)): h.append((SEC["verse3"]["lines"][i]["t"] + 1.5, 0.81 + 0.008 * j))
+    for j, i in enumerate(range(6)): h.append((SEC["verse3"]["lines"][i]["t"] + 2.6, 0.81 + 0.008 * j))
     for k in range(12): h.append((bar_t(78 + k) + 0.36, 0.86 + 0.0075 * k))
     return sorted(h)
 HITS = _hits()
@@ -287,9 +287,9 @@ def render(i):
     z, cx, cy = sc.cam(tt)
     p.img = apply_cam(p.img, z, cx, cy)
     # credits (drawn after the camera so they never shake)
-    if t < 6.6:
-        a = clamp(min((t - 0.35) / 0.6, (6.4 - t) / 0.6))
-        blend_overlay(p, lambda q: credits.opening_ribbon(q, 960, 1000), a)
+    if 0.3 < t < 6.0:                     # the opening statement rides along the top of the storm, then the corner tag takes over
+        a = clamp(min((t - 0.4) / 0.5, (5.9 - t) / 0.5))
+        blend_overlay(p, lambda q: credits.opening_ribbon(q, 960, 80), a)
     ba = credits.bug_alpha(t)
     if ba > 0:
         blend_overlay(p, lambda q: credits.bug(q, 36, 24), ba)

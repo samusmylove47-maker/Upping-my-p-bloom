@@ -10,6 +10,18 @@ LEAD = 0.85                                     # chorus lines start this long b
 STARTS = dict(intro=None, verse1=6, pre1=14, chorus1=20, verse2=28, pre2=36, chorus2=42, dance=50, verse3=54, bridge=68, final=78, outro=90)
 ONE_BAR_LINES = {"chorus1", "chorus2", "final"}   # one lyric line per bar, so the grid beats the recognizer
 
+# Line starts corrected after listening-by-numbers against the vocal stem (loudness trace + word-level recognizer), and by ear from the
+# author's check of the first minute ("Ready? Ready? Count it in" was showing ~0.6-1 s late). Times are seconds in the mp3.
+CHECKED = {
+    ("intro", 0): 2.25, ("intro", 1): 5.76, ("intro", 2): 8.24,          # the spoken intro: vocal energy begins at 2.25 s
+    ("verse1", 0): 11.48,
+    ("pre1", 2): 33.40, ("pre2", 2): 73.81,                                # the FIRST "Ready?" (the aligner had latched onto the second)
+    ("dance", 0): 92.92, ("dance", 1): 96.59,                              # "Dig!" is on beat 2; BLOOM! lands on the next downbeat
+    ("verse3", 0): 98.65, ("verse3", 1): 102.28, ("verse3", 2): 106.02, ("verse3", 3): 109.85,
+    ("verse3", 4): 113.42, ("verse3", 5): 117.15, ("verse3", 6): 120.95, ("verse3", 7): 122.92,   # "Somebody's" is sung as a ~1.1 s lead-in to each downbeat
+    ("bridge", 0): 124.98,
+}
+
 lyr = json.load(open("lyrics.json"))
 lyr["sections"][0]["lines"][0] = "Everybody's upping their P-doom."   # as sung: the intro says P-doom, the outro says doom
 meas = json.load(open("out/audio/timing.json"))["lines"]
@@ -33,6 +45,8 @@ for si, sec in enumerate(lyr["sections"]):
             t, src = m["t"], "vocal"
         else:
             t, src = m["t"], "vocal-weak"
+        if (sid, li) in CHECKED:
+            t, src = CHECKED[(sid, li)], "checked"
         lines.append(dict(text=text, t=round(t, 2), src=src))
     out_secs.append(dict(id=sid, name=sec["name"], start_bar=k0, bars=(None if k0 is None else round((s1 - s0) / BAR, 1)),
                          start_s=round(s0, 2), end_s=round(s1, 2), direction=sec["direction"], lines=lines))
