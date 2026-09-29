@@ -128,7 +128,18 @@ def fit_size(txt, maxw, size, path=FRED, lo=40):
     return size
 
 
-def caption(p, t, y=124, fill=INK, shade=CORAL, maxw=1700, size=104, line=None, pulse_amp=0.10):
+def caption_ink(p, y, size):
+    """Ink colour for the caption: dark on light scenes, cream on dark ones (smooth in between, so it never flickers)."""
+    box = (260, int(max(0, y - size * 0.55)), 1660, int(min(p.img.size[1], y + size * 0.55)))
+    lum = float(np.asarray(p.img.crop(box).convert("L").resize((16, 2), Image.BOX), np.float32).mean())
+    k = clamp((lum - 100.0) / 40.0)
+    return tuple(int(v) for v in mixc_((250, 240, 222), INK, k))
+
+
+def mixc_(a, b, u): return tuple(a[i] + (b[i] - a[i]) * u for i in range(3))
+
+
+def caption(p, t, y=124, fill=None, shade=CORAL, maxw=1700, size=104, line=None, pulse_amp=0.10):
     """Big cut-out caption at the top, pops on each new line."""
     L_ = line or line_at(t)
     if not L_:
@@ -137,6 +148,8 @@ def caption(p, t, y=124, fill=INK, shade=CORAL, maxw=1700, size=104, line=None, 
     txt = cap_text(raw)
     if not txt:
         return
+    if fill is None:
+        fill = caption_ink(p, y, size)
     s = fit_size(txt, maxw, size)
     age = t - t0
     if age < 0:
