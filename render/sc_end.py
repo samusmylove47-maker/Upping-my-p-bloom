@@ -133,11 +133,14 @@ class EndCard(Stage):
         lines_all = list(T_["credit_lines"])
         if T_.get("director"):
             lines_all.insert(1, "Directed by " + T_["director"])
+        cs = 38                                                  # credit size: shrink until every line sits on one row
+        while cs > 28 and max(font(FRED, cs * paper.S).getlength(ln) / paper.S for ln in lines_all) > 1010:
+            cs -= 1
         for i, ln in enumerate(lines_all):
-            for sub in F.fit_lines(ln, 38, 940):
-                blend_overlay(p, lambda q, sub=sub, y=y: q.text(1315, y, sub, 38, INK, shadow=0, hl=False), fade(1.7 + 0.45 * i))
-                y += 50
-            y += 20
+            for sub in F.fit_lines(ln, cs, 1010):
+                blend_overlay(p, lambda q, sub=sub, y=y: q.text(1315, y, sub, cs, INK, shadow=0, hl=False), fade(1.7 + 0.45 * i))
+                y += cs + 14
+            y += 18
         if lt > 3.4:
             kk = eob((lt - 3.4) / 0.35)
             p.tag(1315, 870, "Your turn.  I saved you a shovel.", max(8, int(44 * kk)), fill=(255, 226, 150))

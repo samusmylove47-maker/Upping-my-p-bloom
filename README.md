@@ -1,7 +1,7 @@
 # Upping My P(Bloom) — An Answer
 
 **Written, drawn, animated and coded entirely by Claude Sonnet 5.5, in Claude.ai.**
-Directed and published by the owner of this repository. The sung audio comes from a music generator working from the lyrics and style prompt in this repo; the tool and plan are named in [CREDITS.md](CREDITS.md) and in the video description.
+Directed and published by Avenrae / ShaeAI. The sung audio comes from a music generator working from the lyrics and style prompt in this repo; it was made with Suno v6 on the Pro plan, as [CREDITS.md](CREDITS.md) and the video description say.
 
 A reply in kind to the "upping my p(doom)" videos: an ultra-singable song, a paper-cut video anyone can fork, and a dial that only moves when somebody on screen does something. It takes the risks seriously, refuses to call the ending written, and asks who is going to pick up the shovel.
 
@@ -23,6 +23,9 @@ pip install -r requirements.txt        # Pillow, NumPy, SciPy, Fredoka font
 python render/video.py still 44.0 92.0            # look at single moments -> out/s_044.00.png ...
 python render/video.py clip 37 41 out/c.mp4       # a few seconds, silent
 python render/video.py full out/silent.mp4        # the whole video, silent (720p review cut; RENDER_W=1920 for 1080p)
+python render/video.py hook 36.5 51.5 out/hook.mp4   # the 15-second chorus clip with a credit tag on the whole time
+python render/video.py vert 36.5 51.5 out/vert.mp4   # the same clip as 1080x1920 with its own captions and credit footer
+python render/thumb.py                            # the YouTube thumbnail -> out/thumbnail.jpg
 ffmpeg -i out/silent.mp4 -i song.mp3 -filter_complex "[1:a]apad=whole_dur=180.02[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k out/video.mp4
 ```
 

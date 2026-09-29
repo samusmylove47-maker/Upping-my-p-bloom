@@ -32,6 +32,8 @@ NF = int(round(TOTAL * FPS))
 OW = int(os.environ.get("RENDER_W", 1280)); OH = OW * 9 // 16
 SEC = {s["id"]: s for s in TM["sections"]}
 FCOLS = [CORAL, PINK, MARIGOLD, VIOLET, CREAM, (255, 160, 122)]
+HOOK = None            # {"t0", "t1", "bug"} while rendering a short clip: no opening fade, own fade-out, optional persistent credit tag
+NO_CAPTION = False     # the vertical cut draws its own captions
 
 
 # ------------------------------------------------------------------ small math
@@ -141,6 +143,8 @@ def mixc_(a, b, u): return tuple(a[i] + (b[i] - a[i]) * u for i in range(3))
 
 def caption(p, t, y=124, fill=None, shade=CORAL, maxw=1700, size=104, line=None, pulse_amp=0.10):
     """Big cut-out caption at the top, pops on each new line."""
+    if NO_CAPTION:
+        return
     L_ = line or line_at(t)
     if not L_:
         return
@@ -277,6 +281,8 @@ def post(img, t):
     oy, ox = int(t * 977) % 64, int(t * 613) % 64
     a = (a + _NOISE["n"][oy:oy + OH, ox:ox + OW]) * _NOISE["v"]
     fade = clamp(t / 0.5) * clamp((TOTAL - t) / 0.9)
+    if HOOK:
+        fade = clamp((HOOK["t1"] - t) / 0.35)
     return (np.clip(a, 0, 255) * fade).astype(np.uint8)
 
 
@@ -300,12 +306,14 @@ def render(i):
     z, cx, cy = sc.cam(tt)
     p.img = apply_cam(p.img, z, cx, cy)
     # credits (drawn after the camera so they never shake)
-    if 0.3 < t < 6.0:                     # the opening statement rides along the top of the storm, then the corner tag takes over
+    if 0.3 < t < 6.0 and not HOOK:        # the opening statement rides along the top of the storm, then the corner tag takes over
         a = clamp(min((t - 0.4) / 0.5, (5.9 - t) / 0.5))
         blend_overlay(p, lambda q: credits.opening_ribbon(q, 960, 80), a)
     ba = credits.bug_alpha(t)
+    if HOOK:
+        ba = clamp((t - HOOK["t0"]) / 0.3) if HOOK.get("bug") else 0.0
     if ba > 0:
-        blend_overlay(p, lambda q: credits.bug(q, 36, 24), ba)
+        blend_overlay(p, lambda q: credits.bug(q, 36, 1004 if HOOK else 24), ba)   # clips: bottom-left, clear of the captions
     if u is not None:
         col = getattr(wsc, "wipe_color", CORAL)
         wipe(p, u, col, CREAM, seed=wsc.t0)

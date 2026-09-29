@@ -110,11 +110,11 @@ class Intro(Scene):
             sz = int(60 * eob((e - 0.98) / 0.26))
             if sz > 8:
                 p.tag(960, 610, "— An Answer", sz, fill=CORAL, ink=CREAM, rot=-0.02)
-        k = eob((e - 1.36) / 0.3) if e > 1.36 else 0.0
+        k = eob((e - 0.98) / 0.3) if e > 0.98 else 0.0            # Wren and Sprig hop in with "An Answer" so the card has company for a second
         bob_ = -14 * abs(math.sin(math.pi * (t - TITLE) / BEAT * 0.5))
         if k > 0.02:
-            wren(p, 600, 1046 + bob_ * 0.5, 1.4 * k, hands=[(600 - 55 * 1.4 / 1.0 * 0.6 * 0 - 33, 1046 - 158 * k), (600 + 44, 1046 - 168 * k)], held=("shovel", 1, -1.15), look=0.6)
-            sprig(p, 880, 1052 + bob_, 1.4 * k, look=0.5, bloom=None, tilt=4)
+            wren(p, 450, 1046 + bob_ * 0.5, 1.4 * k, hands=[(450 - 33, 1046 - 158 * k), (450 + 44, 1046 - 168 * k)], held=("shovel", 1, -1.15), look=0.6)
+            sprig(p, 740, 1052 + bob_, 1.4 * k, look=0.5, bloom=None, tilt=4)
         a = clamp((e - 0.15) / 0.35) * clamp((11.62 - t) / 0.2)
         blend_overlay(p, lambda q: credits.opening_ribbon(q, 960, 84), a)
 

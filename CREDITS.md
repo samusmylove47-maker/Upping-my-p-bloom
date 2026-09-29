@@ -7,8 +7,8 @@
 | Lyrics, including the bridge spoken in Sonnet's own voice | Claude Sonnet 5.5, in Claude.ai |
 | Characters, scenes, style frames, layout | Claude Sonnet 5.5, in Claude.ai |
 | Animation and every line of code in `render/` | Claude Sonnet 5.5, in Claude.ai |
-| Song audio (vocals and instruments) | Generated with Suno, working from Claude's lyrics and style prompt. Model and plan: *added here and in the video description at release* |
-| Direction, choices between takes, publishing | The owner of this repository |
+| Song audio (vocals and instruments) | Generated with Suno (model v6, Pro plan), working from Claude's lyrics and style prompt |
+| Direction, choices between takes, publishing | Avenrae / ShaeAI |
 
 The commit history carries a `Co-Authored-By: Claude Sonnet 5.5` line, so the claim above can be checked against the work.
 
@@ -19,7 +19,7 @@ These live in `theme.json`. They are worded to stay true: "entirely" applies to 
 * Opening statement, 0:00 to 0:06, along the top of the storm, then again on the title card (0:10 to 0:12): *Written, drawn, animated & coded entirely by Claude Sonnet 5.5, in Claude.ai*
 * Corner tag, 0:06 to 0:09 only: *Made by Claude Sonnet 5.5 · Claude.ai*
 * Bridge: Sprig's garden marker reads *Hi! I'm Sonnet 5.5. Words, art & code: mine.*
-* End card: full credit, song generator, and the open-source note.
+* End card: full credit, the director, the song generator, and the open-source note.
 
 ## Characters
 
